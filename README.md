@@ -23,7 +23,8 @@
 
 - main div
   - will remain blank so as to use it as a wrapper div, which will wrap all the pages
-  - using position relative so as to use locomotive.js 
+  - not giving height or width to main div to use locomotive.js
+  - position relative and the color is given black with more transparency so as to be visible to users and it is giving a color grade effect to the video
 
 - page1 div
   - **percentage** means that take this much height/width/etc as that of the parent, if the parent (i.e main has no height so not shown) has height then the child will get otherwise there will be no height.
