@@ -65,11 +65,28 @@ gsap.to("#nav", { // this is how we initiate gsap animation and the #nav is the 
 ```
 
 - we can also use all the CSS properties only we need to use **Camel Case** i.e first word will be small and then the next word will have the first letter capital and rest all small.
-- rest of the things are in the comments **TODO: add those here** 
+- rest of the things are in the comments **TODO: add those here**
 
 ### cursor div
 
-- Don't mess with the main div. Now we'll make the cursor div 
-
+- Don't mess with the main div. Now we'll make the cursor div
 
 ### scroller div
+
+- Now we'll make two divs for the two scroller that goes on flex absolute, and we'll give properties `display:inline-block` so that they come at the same line and `whitespace: nowrap;` so that the two lines with the same text comes at the same line and appears as a straight line.
+- childer scroller will also have the same properties as the parent scroller
+- we'll adjust the size and the weight of the font according to the original
+- also give margin right to the h4 div to make space between the two divs of sentences
+- now use `-webkit-text-stroke: 2px color_req;` which is used to add stroke to any text, i.e to add boundary to the top of any letter
+- then add color transparent for transparency to the block that is bounded by the text stroke
+- Since the page is also scroling to the left and right and the contents are a bit unusual so we'll apply `overflow-y:hidden` `overflow-x: auto` so as to not move the main page left and right and instead the scroller text goes left and right using scroll bar
+- Now we'll need to add scroll animation so we declare and apply `@keyframes animation_name{}` which has translate x position from 0 to translate x position till -100% and then we'll neeed to add that animation to the div which we want to applly that and we can do that using the `animation-name: name_as_set` followed by the other settings such as duration etc
+- animation duration will be needed to set as per the original, then `animation-timing-function: linear;` to show how it will proceed after one cycle and linear makes it same as the initial cycle and then the `animation-iteration-count: infinite;` to iterate it inifinitely
+
+**TODO**: learn all about GSAP and CSS animations
+
+### about-us div
+
+- Now we have given some viewport height and some width to the p as well as the h3 and some flex, justify content space-around and align items center and padding to make the text better appear as the original
+- Then the images to the left and right we have used height and width as per the original but the thing noteable is the `object-fit: cover;` which is used to make the image appear as a cropped instead of like a forcefully resized image.
+- Also to make the h3 appear slightly above the p, we'll need to add margin-bottom with some pixels.
