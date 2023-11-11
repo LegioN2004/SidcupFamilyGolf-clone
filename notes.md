@@ -90,3 +90,12 @@ gsap.to("#nav", { // this is how we initiate gsap animation and the #nav is the 
 - Now we have given some viewport height and some width to the p as well as the h3 and some flex, justify content space-around and align items center and padding to make the text better appear as the original
 - Then the images to the left and right we have used height and width as per the original but the thing noteable is the `object-fit: cover;` which is used to make the image appear as a cropped instead of like a forcefully resized image.
 - Also to make the h3 appear slightly above the p, we'll need to add margin-bottom with some pixels.
+
+### cards div
+
+- If the video appears playing in the background after then use the min-height property of CSS, more on that in the responsive stuff 
+- When hovered on the card then change the opacity of the overlay to 1
+- Also for the tilt effect, use the transform property with `rotate3d()` value on the card on hover and its value will be in the format `transform: rotate3d(x,y,z,degrees)`, here x/y/z axis gets the values a 0 or 1 to show if it'll rotate in those axis or not and at last the degree with which it'll rotate. If you give -1 it will rotate from the other side respectively for all the other axes.
+- Also give the perspective property to the html, body part so that the 3d effect look better
+- Also rotate the dot image using transform property
+- use linear gradient for two colors to blend and use the value as "to left bottom" so as to make the color blend in a more diagonal way( to left makes the two colors blend in the left manner)
