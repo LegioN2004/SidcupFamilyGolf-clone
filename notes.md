@@ -99,3 +99,18 @@ gsap.to("#nav", { // this is how we initiate gsap animation and the #nav is the 
 - Also give the perspective property to the html, body part so that the 3d effect look better
 - Also rotate the dot image using transform property
 - use linear gradient for two colors to blend and use the value as "to left bottom" so as to make the color blend in a more diagonal way( to left makes the two colors blend in the left manner)
+
+
+### page3 div
+
+- Always add vh to get a new page with scroll like the original website, then display flex, text align, align items and justify contents to center to make everything in the p tag centered
+- Then use `#page3>p` to add the properties to the p tag to overrride all the previous styling by page3 for that specific p tag.
+- Then use the position absolute to keep the images above all and as such remember to add the position relative to the parent tag whenever applying position relative to any children
+- Then take the page id and the separate image id's and apply the left, right, top, bottom as per the original structure.
+
+#### Adding the forgotten ScrollTrigger
+ 
+- What to use when you need to select an element multiple times then you need to use `document.querySelectorAll("#id_name tag_name")`. Why we need to use this and not `document.querySelector()` because the 'all' version takes all the h4 in the form of NodeLists (which is a kind of an array but not really an array, more on that on DOM manipulation) and as such it takes all of the h4s and if we don't use the all then it'll only take the first h4 which we totally won't do here.
+- Then we'll use the forEach loop which is used for an array, for now you can treat it like an array and in the function value we have used elem which means that use the h4 that comes from the querySelectorAll everytime and as such all the h4s will get selected
+- Then `elem.addEventListener("mouseenter", function () { crsr.style.scale = 2; })` to add event listener so that when mouse enters then cursor style scales i.e increases and also added a cursor style wherein on hover it increases the green circle part to a very big circle of that same teal green color on mouseenter and on mouseleave it resets the cursor style to the original one. We can just copy and change the properties in the foreach loop in order to do that.
+- Now we'll apply gsap using gsap.from and then the elements in double quotes and then in {} add all the things you want
