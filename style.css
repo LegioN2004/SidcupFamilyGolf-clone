@@ -19,6 +19,7 @@ body {
   border-radius: 50%;
   background-color: #95c11e;
   position: fixed;
+  transition: all linear 0.1s;
   z-index: 99;
 }
 
@@ -28,6 +29,7 @@ body {
   border-radius: 50%;
   background-color: #96c11e3b;
   /* background-color: #96c11e3c; */
+  transition: all linear 0.4s;
   position: fixed;
   filter: blur(81px);
   z-index: 9;
@@ -92,7 +94,7 @@ video {
   /* we need to first write content here rule hai since it is before*/
   content: "EAT. DRINK. PLAY.";
   position: absolute;
-  color: black;
+  color: #000;
   top: -6px;
   left: -5px;
   -webkit-text-stroke: 1px #95c11e;
@@ -157,7 +159,7 @@ video {
 
 @keyframes scroll {
   from {
-    transform: translate(x);
+    transform: translateX(0);
   }
   to {
     transform: translateX(-100%);
@@ -171,6 +173,7 @@ video {
   padding: 0 50px;
   position: relative;
   align-items: center;
+  z-index: 10;
   justify-content: space-around;
 }
 
@@ -217,8 +220,8 @@ video {
 
 #about-us-in p {
   font-size: 20px;
-  line-height: 34px;
-  height: 40vh;
+  line-height: 26px;
+  /* height: 40vh; */
 }
 
 #cards-container {
@@ -270,7 +273,7 @@ video {
 }
 
 .overlay h4 {
-  color: black;
+  color: #000;
   font-size: 35px;
   font-weight: 900;
   margin-bottom: 20px;
@@ -278,7 +281,7 @@ video {
 }
 
 .overlay p {
-  color: black;
+  color: #000;
   font-size: 18px;
 }
 
@@ -300,7 +303,7 @@ video {
 
 #green-div h4 {
   width: 45%;
-  color: black;
+  color: #000;
   font-style: 23px;
   font-size: 20px;
   line-height: 33px;
@@ -356,7 +359,6 @@ video {
   height: 30vh;
   width: 100%;
   display: flex;
-  background-color: black;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -409,6 +411,12 @@ video {
   font-weight: 900;
   top: -15%;
   font-family: gilroy;
-  color: black;
+  color: #000;
   -webkit-text-stroke: 1px #fff;
+}
+
+#footer{
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom red blue);
 }
